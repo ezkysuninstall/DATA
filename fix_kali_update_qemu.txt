@@ -1,1 +1,3 @@
+Fix apt upgrade taking 20 hours in kali on qemu, run this to force apt to use ipv4 instead of ipv6
+
 echo 'Acquire::ForceIPv4 "true";' > /etc/apt/apt.conf.d/99force-ipv4
