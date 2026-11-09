@@ -1,0 +1,19 @@
+Fix websites of labs in hackthebox not loading:
+nano openvpn connection file, and add this at the bottom:
+#fix:
+script-security 2
+up /usr/local/bin/htb-mtu.sh
+
+Save & Exit
+
+Now:
+nano /usr/local/bin/htb-mtu.sh
+put this:
+#!/bin/sh
+ip link set dev "$dev" mtu 1200
+
+Save & Exit
+make sure is executable:
+chmod +x /usr/local/bin/htb-mtu.sh
+
+Done! machine web pages should load now
