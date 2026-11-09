@@ -11,12 +11,12 @@ kali will take up all screen in maximised window
 
 run this to add it to startup (or use the kali-resolution.desktop file):
 
-mkdir -p ~/.config/autostart
+mkdir -p /root/.config/autostart
 
-cat > ~/.config/autostart/kali-resolution.desktop <<'EOF'
+cat /root/.config/autostart/kali-resolution.desktop  
+
 [Desktop Entry]
 Type=Application
 Name=Kali Display Resolution
-Exec=xrandr --output Virtual-1 --mode 1920x872
+Exec=sh -c "sleep 3; xrandr --output Virtual-1 --mode 1920x872"
 X-GNOME-Autostart-enabled=true
-EOF
