@@ -1,0 +1,22 @@
+This is to fix kali vm being a bitch in qemu
+
+run:
+xrandr
+from this output, you can see the resolution necessary, in this case 1920×872
+
+now run:
+xrandr --output Virtual-1 --mode 1920x872
+
+kali will take up all screen in maximised window
+
+run this to add it to startup (or use the kali-resolution.desktop file):
+
+mkdir -p ~/.config/autostart
+
+cat > ~/.config/autostart/kali-resolution.desktop <<'EOF'
+[Desktop Entry]
+Type=Application
+Name=Kali Display Resolution
+Exec=xrandr --output Virtual-1 --mode 1920x872
+X-GNOME-Autostart-enabled=true
+EOF

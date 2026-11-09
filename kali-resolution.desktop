@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Kali Display Resolution
+Exec=xrandr --output Virtual-1 --mode 1920x872
+X-GNOME-Autostart-enabled=true
